@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Plag";
+  src: url("Plag.otf") format("opentype");
+}
+body {
+  background-color: #EE604C;
+  color: black;
+}
+
+body * {
+  font-family: "Plag"; 
+  font-weight: 400;
+}
+
+.poc-color-1 {
+  color: #F0FCFF;
+}
+
+.poc-color-2 {
+  color: #F0FBFF;
+}
+
+.poc-color-3 {
+  color: #F0FBFF;
+}
+
+.poc-color-4 {
+  color: #EDF9FF;
+}
+
+.poc-color-5 {
+  color: #C4EAFF;
+}
+
+.poc-color-6 {
+  color: #9BD8FF;
+}
+
+.poc-color-7 {
+  color: #79B1D9;
+}
+
+.poc-color-8 {
+  color: #5B8BB3;
+}
+
+.poc-color-9 {
+  color: #41688C;
+}
+
+.poc-color-10 {
+  color: #2E4966;
+}
+
+
+
+
+
+.poc-navbar-container li a {
+  color: #41688C;
+}
+
+.poc-navbar-container li.uk-active a {
+  color: #2E4966;
+}
+
+.poc-logo {
+  color: #2E4966;
+}
+
+.poc-hero-container {
+  background-color: #2E4966;
+  height: 34rem;
+  margin-top: 0px;
+}
+
+.poc-hero {
+  color: #2E4966;
+  margin-top: 13rem;
+  line-height: 1.2;
+  position: relative;
+}
+
+.poc-body-container {
+  margin-top: 8rem;
+}
+
+.poc-body-title {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.poc-body-container .uk-text-lead {
+  margin-bottom: 5rem;
+}
+
+.poc-footer-container {
+  height: 21rem;
+  background-color: #2E4966;
+}
+
+.some-grafika {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.some-golab {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  width: 38%;
+}
+
+.rotating {
+  font-size: 117px;
+  color: black;
+}
+
+.rotating:first-of-type {
+  margin-top: 34%;
+}
+
+.some-body-text {
+  font-size: 37px;
+  padding-bottom: 610px;
+}
