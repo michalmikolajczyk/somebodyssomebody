@@ -131,8 +131,12 @@ a, a:hover {
 }
 
 .some-body-text {
-  font-size: 37px;
+  font-size: 24px;
   padding-bottom: 610px;
+}
+
+.some-body-text > p {
+  
 }
 
 .some-input {
@@ -193,11 +197,8 @@ a, a:hover {
   text-align: center;
 }
 
-.some-body-text .text-smaller {
-}
-
 .some-body-text .text-even-smaller {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .name-from-list {
@@ -224,6 +225,16 @@ a, a:hover {
 
 .some-submit input {
   float: right;
+}
+
+.some-submit input[disabled] {
+  color: black;
+  border: 1px solid black;
+  opacity: 0.34;
+}
+
+.some-submit input[disabled]:hover {
+  cursor: not-allowed;
 }
 
 .last-submit input {
