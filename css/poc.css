@@ -12,6 +12,11 @@ body * {
   font-weight: 400;
 }
 
+a, a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
 .poc-color-1 {
   color: #F0FCFF;
 }
@@ -128,4 +133,99 @@ body * {
 .some-body-text {
   font-size: 37px;
   padding-bottom: 610px;
+}
+
+.some-input {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  font-size: 37px;
+  border-radius: 9px;
+  line-height: 55px;
+  display: block;
+  height: 69px;
+}
+
+.some-input:focus, .some-input:hover {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+}
+
+.some-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+.some-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+
+.some-input::-ms-input-placeholder { /* Microsoft Edge */
+  color: black;
+}
+
+.some-radio-label {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 9px;
+  height: 49px;
+  border-radius: 9px;
+  margin-left: 9px;
+  font-size: 24px;
+  line-height: 24px;
+  color: black;
+}
+
+.some-radio[type="radio"] {
+  position: relative;
+  top: -9px;
+  display: inline-block;
+  color: black;
+  border: 1px solid black;
+}
+
+.some-radio[type="radio"]:checked {
+  background-color: black;
+}
+
+.i-understand {
+  text-align: center;
+}
+
+.some-body-text .text-smaller {
+}
+
+.some-body-text .text-even-smaller {
+  font-size: 24px;
+}
+
+.name-from-list {
+  font-size: 37px;
+  border: 1px solid black;
+  padding: 9px;
+  height: 69px;
+  border-radius: 9px;
+  text-align: center;
+}
+
+.name-repeat-please {
+  border: 1px solid black;
+  padding: 9px;
+  border-radius: 9px;
+}
+
+.name-repeat-please label.uk-form-label {
+  font-size: 24px;
+  margin-top: 0px;
+  line-height: 34px;
+}
+
+.some-submit input {
+  float: right;
+}
+
+.last-submit input {
+  position: relative;
+  top: 10px;
 }

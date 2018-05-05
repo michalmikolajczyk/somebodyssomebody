@@ -25,27 +25,27 @@ class App extends React.Component {
   step1 = () => (
     <div>
       <form className="uk-grid-small" data-uk-grid onSubmit={this.nextStep} >
-        <div className="uk-width-2-5@s name-please">
+        <div className="uk-width-3-5@s name-please">
           <input
-            className="uk-input"
+            className="uk-input some-textinput some-input"
             type="text"
             placeholder="Enter your name"
             value={this.state.name}
             onChange={this.handleNameChange}
           />
         </div>
-        <div className="uk-width-2-5@s i-understand">
-          <label><input
-            className="uk-radio"
+        <div className="uk-width-1-5@s i-understand">
+          <input
+            id="form-horizontal-text-111"
+            className="uk-radio some-radio"
             type="radio"
             name="radio2"
             value={this.state.understand}
             onChange={this.handleConsentChange}
-          /> I understand the digital ritual</label>
+          /><label className="uk-form-label some-radio-label" htmlFor="form-horizontal-text-111"> I understand <br/>the digital ritual</label>
         </div>
-        <div className="uk-width-1-5@s">
-          {/* <label><input type="submit" className="uk-button uk-button-default" /> Submit</label> */}
-          <label><input type="submit" className="uk-button uk-button-default" /></label>
+        <div className="uk-width-1-5@s some-submit">
+          <label><input type="submit" className="uk-button uk-button-default some-submit some-input" /></label>
         </div>
       </form>
     </div>
@@ -55,24 +55,28 @@ class App extends React.Component {
 
   step2 = () => (
     <div>
-      <form className="uk-grid-small" data-uk-grid onSubmit={this.finalSubmit} >
-        <div className="uk-width-2-5@s name-from-list">
-          <span>{this.getRandomName()}</span>
-        </div>
-        <div className="uk-width-4-5@s name-repeat-please">
-          <label className="uk-form-label" htmlFor="form-horizontal-text">Type here the name above:</label>
-          <div className="uk-form-controls">
-              <input
-                className="uk-input"
-                id="form-horizontal-text"
-                type="text"
-                value={this.state.repeatedName}
-                onChange={this.handleNameRepeat}
-              />
+      <form className="uk-form-horizontal" onSubmit={this.finalSubmit} >
+        <div className="uk-grid-small" data-uk-grid>
+          <div className="uk-width-5-5@s name-from-list">
+            <span>{this.getRandomName()}</span>
           </div>
         </div>
-        <div className="uk-width-1-5@s">
-          <label><input type="submit" className="uk-button uk-button-default" /></label>
+        <div className="uk-grid-small" data-uk-grid>
+          <div className="uk-width-4-5@s name-repeat-please">
+            <label className="uk-form-label" htmlFor="form-horizontal-text-123">Type here the <br />name above:</label>
+            <div className="uk-form-controls">
+                <input
+                  className="uk-input some-radio some-input"
+                  id="form-horizontal-text-123"
+                  type="text"
+                  value={this.state.repeatedName}
+                  onChange={this.handleNameRepeat}
+                />
+            </div>
+          </div>
+          <div className="uk-width-1-5@s some-submit last-submit">
+            <label><input type="submit" className="uk-button uk-button-default some-submit some-input" /></label>
+          </div>
         </div>
       </form>
     </div>
