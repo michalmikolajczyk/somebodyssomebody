@@ -25,7 +25,7 @@ class App extends React.Component {
   finalSubmit = (ev) => {
     ev.preventDefault();
     const body = JSON.stringify({ name: this.state.name });
-    fetch('http://somebodyssomebody.trewebs.com/somebody', {
+    fetch('https://somebodyssomebody.herokuapp.com/somebody', {
       method: 'post',
       headers: {
         'content-type': 'application/json'
@@ -38,7 +38,7 @@ class App extends React.Component {
   }
 
   getRandomName = () => {
-    return fetch('http://somebodyssomebody.trewebs.com/somebody', {
+    return fetch('https://somebodyssomebody.herokuapp.com/somebody', {
       method: 'get',
       headers: {
         'content-type': 'application/json'
