@@ -73,6 +73,7 @@ class App extends React.Component {
             type="submit"
             className="uk-button uk-button-default some-submit some-input"
             disabled={disabled}
+            value="Submit"
           /></label>
         </div>
       </form>
@@ -105,6 +106,7 @@ class App extends React.Component {
               type="submit"
               className="uk-button uk-button-default some-submit some-input"
               disabled={disabled}
+              value="Submit"
             /></label>
           </div>
         </div>
