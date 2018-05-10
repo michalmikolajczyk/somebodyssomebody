@@ -121,9 +121,9 @@ a, a:hover {
 }
 
 .rotating {
-  font-size: 112px;
+  font-size: 55px;
   color: black;
-  line-height: 104px;
+  line-height: 50px;
 }
 
 .rotating:first-of-type {
@@ -133,10 +133,6 @@ a, a:hover {
 .some-body-text {
   font-size: 24px;
   padding-bottom: 610px;
-}
-
-.some-body-text > p {
-  
 }
 
 .some-input {
@@ -194,6 +190,10 @@ a, a:hover {
 }
 
 .i-understand {
+  min-width: 226px;
+}
+
+.i-understand label {
   text-align: center;
 }
 
@@ -201,19 +201,27 @@ a, a:hover {
   font-size: 18px;
 }
 
-.name-from-list {
+/* .name-from-list {
+
+} */
+
+.name-from-list > div {
   font-size: 37px;
   border: 1px solid black;
-  padding: 9px;
   height: 69px;
   border-radius: 9px;
   text-align: center;
+  padding: 9px;
 }
 
-.name-repeat-please {
+/* .name-repeat-please {
+} */
+
+.name-repeat-please > div {
   border: 1px solid black;
-  padding: 9px;
+  
   border-radius: 9px;
+  padding: 9px;
 }
 
 .name-repeat-please label.uk-form-label {
@@ -223,8 +231,8 @@ a, a:hover {
   color: black;
 }
 
-.some-submit input {
-  float: right;
+.some-submit {
+  min-width: 198px;
 }
 
 .some-submit input[disabled] {
@@ -240,4 +248,34 @@ a, a:hover {
 .last-submit input {
   position: relative;
   top: 10px;
+}
+
+@media screen and (min-width: 1055px) {
+  .some-submit {
+    text-align: right;
+  }
+
+  .some-submit label {
+    display: inline-block;
+  }
+
+  .rotating {
+    font-size: 69px;
+    line-height: 64px;
+  }
+}
+
+@media screen and (min-width: 1195) {
+  .some-submit {
+    text-align: right;
+  }
+
+  .some-submit label {
+    display: inline-block;
+  }
+
+  .rotating {
+    font-size: 112px;
+    line-height: 104px;
+  }
 }

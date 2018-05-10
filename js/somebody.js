@@ -48,7 +48,7 @@ class App extends React.Component {
 
   step1 = (disabled) => (
     <div>
-      <form className="uk-grid-small" data-uk-grid onSubmit={this.nextStep} >
+      <form className="uk-grid-small uk-child-width-expand@s uk-text-center" data-uk-grid onSubmit={this.nextStep} >
         <div className="uk-width-3-5@s name-please">
           <input
             className="uk-input some-textinput some-input"
@@ -83,22 +83,26 @@ class App extends React.Component {
   step2 = (disabled) => (
     <div>
       <form className="uk-form-horizontal" onSubmit={this.finalSubmit} >
-        <div className="uk-grid-small" data-uk-grid>
+        <div className="uk-grid-small uk-child-width-expand@s uk-text-center" data-uk-grid>
           <div className="uk-width-5-5@s name-from-list">
-            <span>{this.state.somebody}</span>
+            <div>
+              <span>{this.state.somebody}</span>
+            </div>
           </div>
         </div>
         <div className="uk-grid-small" data-uk-grid>
           <div className="uk-width-4-5@s name-repeat-please">
-            <label className="uk-form-label" htmlFor="form-horizontal-text-123">Type here the <br />name above:</label>
-            <div className="uk-form-controls">
-                <input
-                  className="uk-input some-radio some-input"
-                  id="form-horizontal-text-123"
-                  type="text"
-                  value={this.state.repeatedName}
-                  onChange={this.handleNameRepeat}
-                />
+            <div>
+              <label className="uk-form-label" htmlFor="form-horizontal-text-123">Type here the <br />name above:</label>
+              <div className="uk-form-controls">
+                  <input
+                    className="uk-input some-radio some-input"
+                    id="form-horizontal-text-123"
+                    type="text"
+                    value={this.state.repeatedName}
+                    onChange={this.handleNameRepeat}
+                  />
+              </div>
             </div>
           </div>
           <div className="uk-width-1-5@s some-submit last-submit">
