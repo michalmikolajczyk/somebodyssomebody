@@ -26,6 +26,7 @@ class App extends React.Component {
     ev.preventDefault();
     const body = JSON.stringify({ name: this.state.name });
     fetch('https://somebodyssomebody.herokuapp.com/somebody', {
+    // fetch('http://localhost:3000/somebody', {
       method: 'post',
       headers: {
         'content-type': 'application/json'
@@ -38,7 +39,8 @@ class App extends React.Component {
   }
 
   getRandomName = () => {
-    return fetch('https://somebodyssomebody.herokuapp.com/somebody', {
+    fetch('https://somebodyssomebody.herokuapp.com/somebody', {
+    // return fetch('http://localhost:3000/somebody', {
       method: 'get',
       headers: {
         'content-type': 'application/json'

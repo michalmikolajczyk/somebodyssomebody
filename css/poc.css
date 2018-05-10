@@ -201,14 +201,14 @@ a, a:hover {
   font-size: 18px;
 }
 
-/* .name-from-list {
-
-} */
+.name-from-list {
+  height: 69px;
+}
 
 .name-from-list > div {
   font-size: 37px;
+  height: 51px;
   border: 1px solid black;
-  height: 69px;
   border-radius: 9px;
   text-align: center;
   padding: 9px;
