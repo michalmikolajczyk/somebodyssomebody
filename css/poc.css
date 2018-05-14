@@ -275,7 +275,7 @@ a, a:hover {
   }
 }
 
-@media screen and (max-width: 1194px) {
+@media screen and (max-width: 1194px) and (min-width: 1055px) {
   .name-please {
     width: 100%;
   }
@@ -284,6 +284,7 @@ a, a:hover {
   }
   .first-submit {
     margin: 15px auto 0 0;
+    padding-left: 0px;
   }
   
 }
