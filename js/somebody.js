@@ -1,3 +1,6 @@
+const API = 'https://somebodyssomebody.herokuapp.com';
+// const API = 'http://localhost:3000';
+
 class App extends React.Component {
   state = {
     name: '',
@@ -25,8 +28,7 @@ class App extends React.Component {
   finalSubmit = (ev) => {
     ev.preventDefault();
     const body = JSON.stringify({ name: this.state.name });
-    fetch('https://somebodyssomebody.herokuapp.com/somebody', {
-    // fetch('http://localhost:3000/somebody', {
+    fetch(API + '/somebody', {
       method: 'post',
       headers: {
         'content-type': 'application/json'
@@ -39,8 +41,7 @@ class App extends React.Component {
   }
 
   getRandomName = () => {
-    fetch('https://somebodyssomebody.herokuapp.com/somebody', {
-    // return fetch('http://localhost:3000/somebody', {
+    return fetch(API + '/somebody', {
       method: 'get',
       headers: {
         'content-type': 'application/json'
@@ -70,10 +71,10 @@ class App extends React.Component {
             onChange={this.handleConsentChange}
           /><label className="uk-form-label some-radio-label" htmlFor="form-horizontal-text-111"> I understand <br/>the digital ritual</label>
         </div>
-        <div className="uk-width-1-5@s some-submit">
+        <div className="uk-width-1-5@s some-submit first-submit ">
           <label><input
             type="submit"
-            className="uk-button uk-button-default some-submit some-input"
+            className="uk-button uk-button-default some-input"
             disabled={disabled}
             value="Submit"
           /></label>
@@ -110,7 +111,7 @@ class App extends React.Component {
           <div className="uk-width-1-5@s some-submit last-submit">
             <label><input
               type="submit"
-              className="uk-button uk-button-default some-submit some-input"
+              className="uk-button uk-button-default some-input"
               disabled={disabled}
               value="Submit"
             /></label>
@@ -134,3 +135,39 @@ ReactDOM.render(
   <App />,
   document.getElementById('react-app')
 );
+
+class App2 extends React.Component {
+  state = {
+    names: ['Kaja Kusztra', 'Katharina Köhler', 'Matylda Krzykowski']
+  }
+
+  componentWillMount() {
+    this.getAllNames();
+  }
+
+  getAllNames = () => {
+    return fetch(API + '/everybody', {
+      method: 'get',
+      headers: {
+        'content-type': 'application/json'
+      }
+    }).then(res => res.json()).then(json => this.setState({ names: json })).catch(e => false);
+  }
+
+  render() {
+    const { names } = this.state;
+    const renderNames = names.map(item => item.name).join(', ');
+
+    return (
+      <marquee id="in-app" scrollamount="13" direction="right" className="rotating">{renderNames}, {renderNames}, {renderNames}</marquee>
+    );
+  }
+}
+
+const temp = document.createElement("div");
+ReactDOM.render(
+  <App2 />,
+  temp
+);
+const container = document.getElementById('react-app-2');
+container.replaceChild(temp.querySelector('#in-app'), document.getElementById('out-app'));

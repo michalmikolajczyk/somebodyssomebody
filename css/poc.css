@@ -250,12 +250,50 @@ a, a:hover {
   top: 10px;
 }
 
-@media screen and (min-width: 1055px) {
+@media screen and (max-width: 639px) {
   .some-submit {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1054px) {
+  .name-please {
+    width: 100%;
+  }
+  .i-understand {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .name-repeat-please {
+    width: 100%;
+  }
+  .some-submit {
+    width: 100%;
+  }
+  .some-submit input {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1194px) {
+  .name-please {
+    width: 100%;
+  }
+  .i-understand {
+    margin: 15px 15px 0 auto;
+  }
+  .first-submit {
+    margin: 15px auto 0 0;
+  }
+  
+}
+
+@media screen and (min-width: 1055px) {
+  .last-submit {
     text-align: right;
   }
 
-  .some-submit label {
+  .last-submit label {
     display: inline-block;
   }
 
@@ -266,11 +304,11 @@ a, a:hover {
 }
 
 @media screen and (min-width: 1195) {
-  .some-submit {
+  .first-submit {
     text-align: right;
   }
 
-  .some-submit label {
+  .first-submit label {
     display: inline-block;
   }
 
