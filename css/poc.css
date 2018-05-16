@@ -126,8 +126,13 @@ a, a:hover {
   line-height: 50px;
 }
 
-.rotating:first-of-type {
+.rotating:first-child {
   margin-top: 34%;
+}
+
+.rotating.static {
+  position: relative;
+  text-align: justify;
 }
 
 .some-body-text {

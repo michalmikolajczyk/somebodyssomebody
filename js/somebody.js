@@ -159,7 +159,7 @@ class App2 extends React.Component {
     const renderNames = names.map(item => item.name).join(', ');
 
     return (
-      <marquee id="in-app" scrollamount="13" direction="right" className="rotating">{renderNames}, {renderNames}, {renderNames}</marquee>
+      <marquee id="in-app" scrollamount="13" className="rotating">{renderNames}, {renderNames}, {renderNames}</marquee>
     );
   }
 }
