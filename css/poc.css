@@ -87,7 +87,9 @@ a, a:hover {
 }
 
 .poc-body-container {
-  margin-top: 8rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
 }
 
 .poc-body-title {

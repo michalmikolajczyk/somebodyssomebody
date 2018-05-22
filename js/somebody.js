@@ -51,41 +51,7 @@ class App extends React.Component {
 
   step1 = (disabled) => (
     <div>
-      <form className="uk-grid-small uk-child-width-expand@s uk-text-center" data-uk-grid onSubmit={this.nextStep} >
-        <div className="uk-width-3-5@s name-please">
-          <input
-            className="uk-input some-textinput some-input"
-            type="text"
-            placeholder="Enter your name"
-            value={this.state.name}
-            onChange={this.handleNameChange}
-          />
-        </div>
-        <div className="uk-width-1-5@s i-understand">
-          <input
-            id="form-horizontal-text-111"
-            className="uk-radio some-radio"
-            type="radio"
-            name="radio2"
-            value={this.state.understand}
-            onChange={this.handleConsentChange}
-          /><label className="uk-form-label some-radio-label" htmlFor="form-horizontal-text-111"> I understand <br/>the digital ritual</label>
-        </div>
-        <div className="uk-width-1-5@s some-submit first-submit ">
-          <label><input
-            type="submit"
-            className="uk-button uk-button-default some-input"
-            disabled={disabled}
-            value="Submit"
-          /></label>
-        </div>
-      </form>
-    </div>
-  )
-
-  step2 = (disabled) => (
-    <div>
-      <form className="uk-form-horizontal" onSubmit={this.finalSubmit} >
+      <form className="uk-form-horizontal" onSubmit={this.nextStep} >
         <div className="uk-grid-small uk-child-width-expand@s uk-text-center" data-uk-grid>
           <div className="uk-width-5-5@s name-from-list">
             <div>
@@ -121,10 +87,44 @@ class App extends React.Component {
     </div>
   );
 
+  step2 = (disabled) => (
+    <div>
+      <form className="uk-grid-small uk-child-width-expand@s uk-text-center" data-uk-grid onSubmit={this.finalSubmit} >
+        <div className="uk-width-3-5@s name-please">
+          <input
+            className="uk-input some-textinput some-input"
+            type="text"
+            placeholder="Enter your name"
+            value={this.state.name}
+            onChange={this.handleNameChange}
+          />
+        </div>
+        <div className="uk-width-1-5@s i-understand">
+          <input
+            id="form-horizontal-text-111"
+            className="uk-radio some-radio"
+            type="radio"
+            name="radio2"
+            value={this.state.understand}
+            onChange={this.handleConsentChange}
+          /><label className="uk-form-label some-radio-label" htmlFor="form-horizontal-text-111"> I understand <br/>the digital ritual</label>
+        </div>
+        <div className="uk-width-1-5@s some-submit first-submit ">
+          <label><input
+            type="submit"
+            className="uk-button uk-button-default some-input"
+            disabled={disabled}
+            value="Submit"
+          /></label>
+        </div>
+      </form>
+    </div>
+  )
+
   render() {
     const { step, name, repeatedName, somebody, understand } = this.state;
-    const firstSubmitDisabled = !name || !understand;
-    const secondSubmitDisabled = (repeatedName !== somebody);
+    const firstSubmitDisabled = (repeatedName !== somebody);
+    const secondSubmitDisabled = !name || !understand;
     if (step === 1) return this.step1(firstSubmitDisabled);
 
     return this.step2(secondSubmitDisabled);
